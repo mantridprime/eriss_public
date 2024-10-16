@@ -1367,9 +1367,9 @@ class LlamaForCausalLM(LlamaPreTrainedModel, GenerationMixin):
         if past_key_values is None:
             past_key_values = self.past_key_values
         
-        if torch.backends.mps.is_available():
-            torch.mps.empty_cache()
-            torch.mps.synchronize()
+        if torch.backends.cuda.is_available():
+            torch.cuda.empty_cache()
+            torch.cuda.synchronize()
         
         response = self.forward_intercept(
             input_ids,
