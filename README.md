@@ -14,8 +14,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-this is a fork of llama 3.
+this is a fork of llama 3
 
-an interceptor function was created to inject a hardcoded thought prompt, run a generation and then add the throughts to the response prompt.
+an interceptor function was created to inject a hardcoded thought prompt, run a generation and then add the throughts to the response prompt
 
 the llama files will be renamed when i make a PR to huggingface
+
+this current version is a WIP and has debug logging until i verify this code as it was copied from a full featured experimental version
